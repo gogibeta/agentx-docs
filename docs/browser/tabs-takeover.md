@@ -6,7 +6,7 @@ While a browser session is active, a compact card appears **inside the chat mess
 
 - **Tap the card** → fullscreen browser dialog.
 - **Stop** → kills the session.
-- **Take over** → you drive: your taps and typing go straight to the page.
+- **Take over** → you drive: your taps go straight to the page (typing in takeover mode is not yet supported — the agent's own `type_text` action handles text entry).
 - **Hide (eye icon)** → collapses the card; a small floating button brings it back.
 
 ## Multiple tabs

@@ -21,7 +21,7 @@ After installing:
 3. Confirm the version matches the release you downloaded (e.g. `2.4.0-beta15`).
 
 ::: tip Version stuck on an old number?
-If About still shows the old version after installing, the install didn't take effect — Android sometimes silently keeps the old copy. Re-download the APK, tap it again, and confirm you see the **Update** prompt (not a fresh Install prompt).
+If About shows an older version string than the release you installed (e.g. the APK says beta15 but About shows an older number), that's usually just stale version metadata baked into that build — the new code is still installed and running. If you're unsure, reinstall from the release APK and confirm you see the **Update** prompt (not a fresh Install prompt), which proves the signature matches and your data is preserved.
 :::
 
 ## What's next

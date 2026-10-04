@@ -32,7 +32,7 @@ If you prefer wrangler over the script: script name `agentx-browser`, Durable Ob
 
 ## Step 3 — Set GitHub repo secrets
 
-On the dummy account's repo fork: **Settings → Secrets and variables → Actions → New repository secret**:
+In your copy of the repo: **Settings → Secrets and variables → Actions → New repository secret**: (many people use a separate GitHub account for the runner repo to keep experiments isolated from their main account)
 
 - `WORKER_URL` = your Worker URL from Step 2.
 - `RELAY_SECRET` = the exact same value you gave the Worker.
@@ -67,7 +67,7 @@ curl "https://<worker>/json/version?token=<CLIENT_TOKEN>"
 ## Caveats
 
 - **Experimental PoC** — not production-hardened.
-- **Dummy GitHub account only** — ToS risk on your main account.
+- **ToS note** — GitHub Actions is meant for CI/CD, not 24/7 servers. For always-on use prefer a self-hosted runner or a small VPS; a separate account only isolates experiments, it doesn't make round-the-clock runs compliant.
 - **Handover blips** — every ~6h the DO drops client CDP sockets during runner swap; the app reconnects automatically.
 - **Rotate secrets if exposed** — anyone with `RELAY_SECRET` can attach a rogue browser; anyone with `CLIENT_TOKEN` can drive yours.
 
